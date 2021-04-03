@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    text-align: center;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    width: 100%;
+    height: 20%;
+    background: red;
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 30%;
+    height: 100%;
+    background: blue;
+    color: white;
+}
+
+.content {
+    width: 70%;
+    height: 100%;
+    background: white;
+    color: black;
+}
+
+.footer {
+    width: 100%;
+    height: 20%;
+    background: green;
+    color: white;
+}
+
+@media screen and (max-width: 800px){
+    .sidebar {
+        width: 100%;
+        height: 30%;
+    }
+    .content {
+        width: 100%;
+        height: 70%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primjer10</title>
+</head>
+<script>
+    function prikaziRandomLOLChampiona() {
+        let xhttp = new XMLHttpRequest()
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                const response = JSON.parse(this.responseText)
+                const image = document.createElement("img")
+                image.src = response.imageSrc
+                image.width = 250
+                const name = document.createElement("p")
+                name.innerText = response.name
+                const div = document.getElementById("result")
+                div.innerHTML = ""
+                div.append(name, image)
+            }
+        }
+        xhttp.open("GET", "/randomChampion")
+        xhttp.send()
+    }
+</script>
+<body>
+<h1>Ajax demonstracija:</h1>
+<button onclick="prikaziRandomLOLChampiona()">Prikaži random LOL championa</button>
+<div id="result"></div>
+</body>
+</html>
